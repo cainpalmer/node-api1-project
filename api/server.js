@@ -51,7 +51,7 @@ server.post('/api/users', async (req, res) => {
 })
 
 // DELETE User
-server.delete('/api.users.:id', (req, res) => {
+server.delete('/api/users/:id', async (req, res) => {
     const {id} = req.params
     User.remove(id)
     .then(deletedUser => {
